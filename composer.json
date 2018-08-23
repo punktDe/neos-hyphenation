@@ -2,6 +2,7 @@
   "description": "Neos Eel Helper package for hyphenating Text",
   "type": "neos-package",
   "name": "punktde/neos-hyphenation",
+  "license": "MIT",
   "require": {
     "neos/neos": "*"
   },

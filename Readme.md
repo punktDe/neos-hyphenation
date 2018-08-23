@@ -26,10 +26,10 @@ Navigate to the `Resources/Private/Library` directory of this package, where the
 
 **Configure caching in your project:**
 
-Please specify a cache backend for this package's cache (`PunktDeNeosHyphenation_HyphenationCache`) in your project's global cache configuration file. I recommend making the cache persistent, as its contents are unlikely to change.
+You might specify a different cache backend and cache lifetime in the `Caches.yaml`file. 
 The first page hit will be very slow, but once most of the long words are in the cache, it will be quite performant.
 
-##Usage
+## Usage
 
  This package provides the Eel Helper `Hyphenation.hyphenateText(string <text>)`, which takes a string as an argument and returns a hyphenated version of this string. 
 

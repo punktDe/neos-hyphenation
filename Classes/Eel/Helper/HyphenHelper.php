@@ -24,7 +24,7 @@ class HyphenHelper implements ProtectedContextAwareInterface
      * @Flow\Inject
      * @var StringFrontend
      */
-    protected $longWordCache;
+    protected $hyphenationCache;
 
     /**
      * @Flow\Inject
@@ -59,11 +59,11 @@ class HyphenHelper implements ProtectedContextAwareInterface
     protected function storeAndRetrieveWord(string $word): string
     {
         $wordHash = md5($this->padding . $word);
-        $cacheEntry = $this->longWordCache->get($wordHash);
+        $cacheEntry = $this->hyphenationCache->get($wordHash);
 
         if (!$cacheEntry) {
             $cacheEntry = $this->hyphenateWord($word);
-            $this->longWordCache->set($wordHash, $cacheEntry);
+            $this->hyphenationCache->set($wordHash, $cacheEntry);
         }
 
         return $cacheEntry;

@@ -1,2 +1,5 @@
 PunktDeNeosHyphenation_HyphenationCache:
+  persistent: true
   frontend: Neos\Cache\Frontend\StringFrontend
+  backendOptions:
+    defaultLifetime: 2419200
