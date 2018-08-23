@@ -1,6 +1,6 @@
 PunktDe\Neos\Hyphenation\Eel\Helper\HyphenHelper:
   properties:
-    longWordCache:
+    hyphenationCache:
       object:
         factoryObjectName: Neos\Flow\Cache\CacheManager
         factoryMethodName: getCache
