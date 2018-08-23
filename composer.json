@@ -1,0 +1,18 @@
+{
+  "description": "Neos Eel Helper package for hyphenating Text",
+  "type": "neos-package",
+  "name": "punktde/neos-hyphenation",
+  "require": {
+    "neos/neos": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "PunktDe\\Neos\\Hyphenation\\": "Classes/"
+    }
+  },
+  "extra": {
+    "neos": {
+      "package-key": "PunktDe.Neos.Hyphenation"
+    }
+  }
+}

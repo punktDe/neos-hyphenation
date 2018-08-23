@@ -1,0 +1,9 @@
+PunktDe\Neos\Hyphenation\Eel\Helper\HyphenHelper:
+  properties:
+    longWordCache:
+      object:
+        factoryObjectName: Neos\Flow\Cache\CacheManager
+        factoryMethodName: getCache
+        arguments:
+          1:
+            value: PunktDeNeosHyphenation_HyphenationCache

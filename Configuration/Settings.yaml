@@ -1,0 +1,13 @@
+Neos:
+  Fusion:
+    defaultContext:
+      Hyphenation: 'PunktDe\Neos\Hyphenation\Eel\Helper\HyphenHelper'
+  Neos:
+    fusion:
+      autoInclude:
+        PunktDe.Neos.Hyphenation: true
+
+PunktDe:
+  Neos:
+    Hyphenation:
+      minimumPadding: 4

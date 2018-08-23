@@ -1,0 +1,19 @@
+{
+  "name": "punktde-eel-hyphenation",
+  "version": "1.0.0",
+  "description": "Node package to provide server-side hyphenation to an Eel helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Punkt.de GmbH",
+  "license": "MIT",
+  "bin": {
+    "hyphenation": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.17.1",
+    "hyphenation.de": "^0.2.1",
+    "hypher": "^0.2.5"
+  }
+}

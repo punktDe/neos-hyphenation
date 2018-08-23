@@ -1,0 +1,2 @@
+PunktDeNeosHyphenation_HyphenationCache:
+  frontend: Neos\Cache\Frontend\StringFrontend
