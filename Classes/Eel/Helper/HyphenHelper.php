@@ -75,8 +75,7 @@ class HyphenHelper implements ProtectedContextAwareInterface
      */
     protected function hyphenateWord(string $word): string
     {
-        $word = str_replace("'", "'\''", $word);
-        $statement = $this->getHyphenationModuleBinPath() . " '" . $word . "' '" . $this->padding . "'";
+        $statement = $this->getHyphenationModuleBinPath().' '.escapeshellarg($word$).' '.escapeshellarg($this->padding);
         return trim(shell_exec($statement), "\n");
     }
 
