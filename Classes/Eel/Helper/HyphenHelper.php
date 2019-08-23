@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace PunktDe\Neos\Hyphenation\Eel\Helper;
 
@@ -10,13 +11,13 @@ namespace PunktDe\Neos\Hyphenation\Eel\Helper;
  * source code.
  */
 
+use Neos\Cache\Exception\InvalidDataException;
 use Neos\Flow\Annotations as Flow;
 use Neos\Eel\ProtectedContextAwareInterface;
 use Neos\Flow\Configuration\Exception\InvalidConfigurationException;
 use Neos\Flow\Exception;
-use Neos\Flow\Package\PackageManagerInterface;
+use Neos\Flow\Package\PackageManager;
 use Neos\Cache\Frontend\StringFrontend;
-
 
 class HyphenHelper implements ProtectedContextAwareInterface
 {
@@ -28,7 +29,7 @@ class HyphenHelper implements ProtectedContextAwareInterface
 
     /**
      * @Flow\Inject
-     * @var PackageManagerInterface
+     * @var PackageManager
      */
     protected $packageManager;
 
@@ -55,6 +56,10 @@ class HyphenHelper implements ProtectedContextAwareInterface
     /**
      * @param string $word : the raw word to hyphenate and store or to retrieve if aready stored
      * @return string : the hyphenated word
+     * @throws Exception
+     * @throws InvalidConfigurationException
+     * @throws InvalidDataException
+     * @throws \Neos\Cache\Exception
      */
     protected function storeAndRetrieveWord(string $word): string
     {
@@ -72,6 +77,8 @@ class HyphenHelper implements ProtectedContextAwareInterface
     /**
      * @param string $word : the word to hyphenate
      * @return string : the hyphenated word
+     * @throws Exception
+     * @throws InvalidConfigurationException
      */
     protected function hyphenateWord(string $word): string
     {
