@@ -84,7 +84,7 @@ class HyphenHelper implements ProtectedContextAwareInterface
     {
         $word = str_replace("'", "'\''", $word);
         $statement = $this->getHyphenationModuleBinPath() . " '" . $word . "' '" . $this->padding . "'";
-        return trim(shell_exec($statement), "\n");
+        return trim((string)shell_exec($statement), "\n");
     }
 
     /**
