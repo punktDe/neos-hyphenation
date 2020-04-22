@@ -103,7 +103,7 @@ class HyphenHelper implements ProtectedContextAwareInterface
         }
 
         if (!is_executable($binPath)) {
-            throw new Exception(sprintf('The hyphenation binary in the configured path "%s" is not executable', $binPath), 1534865271);
+            chmod($binPath, 0700);
         }
 
         return $binPath;
